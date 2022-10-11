@@ -1,0 +1,7 @@
+#  take a function of integer N
+#  whoWins(number_of_people: Int) -> Int
+#  let's say there are 4 people and sword is always with 1
+#  now 1 will kill 2 and now the sword goes to 3 and 3 will kill 4
+#  now sword is again with 1 and 1 will kill 4 as there are 2 and 3 dead
+#  the winner is 1
+#  return 1

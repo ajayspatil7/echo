@@ -1,0 +1,25 @@
+(command_center directory and files explained)
+
+1. commands.py  : Contains all the valid commands in a form of dictionary.
+2. processes.py : Contains all the necessary processes needs to be run in the background.
+               Process is as follows: A function to validate the command, a function to log the command
+               And a function to execute the command.
+
+3. terminalCenter.py: Contains the main function which is the entry point of the program.
+                      It also contains the function to print the prompt and to take the input from the user.
+                      It also contains the function to parse the input and to execute the command.
+                      It also contains the function to print the error message.
+
+(testBage directory and files explained)
+
+1. terminalTester.py: This file is for testing the terminalCenter.py file.
+
+(this_cpu directory and files explained)
+
+1. cpu.py: This file is center for all operations done in other parts of the file.
+           Whatever information user sees goes from this file only.
+
+2. kernel.py: This communicates between the cpu.py and processor.py.
+              It also contains the function to get the information about the kernel.
+
+3. processor.py: This file contains the functions and performs operations based on conditional statements.
