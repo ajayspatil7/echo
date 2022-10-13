@@ -16,10 +16,18 @@ class Processes:
         commandsComms = commands.Commands()
         # Inspect the command and check if it is valid
         if command in commandsComms.VALID_ECHO_COMMANDS or command in commandsComms.VALID_TERMINAL_OPERATIONS or command in commandsComms.VALID_FLIGHT_OPERATIONS:
-            #print(commandInit)
+            # print(commandInit)
             return True
         else:
-            #print(commandInit)
+            # print(commandInit)
+            return False
+
+    def inspectCommandStage2(self, command: str) -> bool:
+        # Check if the command is in processor.terminalProcessor and processor.vehicleProcessor
+        from ECHO_V1.this_cpu import processor
+        if command in processor.terminalProcessor or command in processor.vehicleProcessor:
+            return True
+        else:
             return False
 
     # Function to log the command to a file
@@ -42,8 +50,12 @@ class Processes:
         threadsEngine.echoThreads.threadEchoIntro(None)
 
     # Get data from processor
-    def signalEcho(self):
-        pass
+    def signalEcho(self, command: str) -> bool:
+        from ECHO_V1.this_cpu import processor
+        if command in processor.terminalProcessor:
+            processor.terminalProcessor[command]()
+        if command in processor.vehicleProcessor:
+            processor.vehicleProcessor[command]()
 
     # Get data from processor
     def getSignal(self, command: str) -> bool:
@@ -54,6 +66,6 @@ class Processes:
         else:
             return command, False
 
-    # Function to clear the commands from the terminal
-    def clearConsole(self):
-        os.system('clear')
+    # Stop the processes and exit the terminal
+    def stopProcesses(self=None):
+        exit(0)

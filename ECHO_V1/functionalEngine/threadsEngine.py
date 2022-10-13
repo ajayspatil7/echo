@@ -1,6 +1,6 @@
 # Functions module for ECHO - created by AJAY S P (not for open source)
 # Holds all the threads for Command processing
-
+import os
 import termcolor
 from termcolor import *
 from ECHO_V1.commands_center import processesThreads
@@ -9,16 +9,16 @@ from ECHO_V1.commands_center import commands
 import time
 from ECHO_V1.assets.assetsInfo import electronicBeeps
 
-defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep8.mp3'
-_electronicBeep2 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep6.mp3'
-_electronicBeep3 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep1.wav'
+# defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep8.mp3'
+# _electronicBeep2 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep6.mp3'
+# _electronicBeep3 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep1.wav'
 
 
 class EchoThreads:
 
     def threadEchoIntro(self=None):
         print('\nGetting info...')
-        electronicBeeps.beepSequential('loading1', interval=0.5, loop=3)
+        electronicBeeps.beepSequential('loading1', interval=0.09, loop=3)
         #time.sleep(2.0)
         termColor = termcolor
 
@@ -55,23 +55,63 @@ class EchoThreads:
     def threadEchoStartTerminal(self=None):
         print(commands.Commands.VALID_ECHO_COMMANDS['echo --start -terminal'])
 
+    def threadClearTerminal(self):
+        os.system('clear')
+
 
 class FlightThreads:
 
     def startFlight(self=None):
-        print("Flight starting...")
+        electronicBeeps.beepSequential('startup')
+        cprint("Flight starting...\n", attrs=['bold'])
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint("Starting HARD Flight Checks...", 'cyan', attrs=['bold'])
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking flight systems...")
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking emergency systems...")
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking electrical systems...")
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking fuel systems...")
+        time.sleep(2.5)
+
+        electronicBeeps.beepSequential('startup')
+        cprint("Hard Flight Checks complete ✓", 'yellow', attrs=['bold'])
+        time.sleep(1.5)
+
+        electronicBeeps.beepSequential('loading1')
+        cprint("\n Starting HARD Avionics check...", 'cyan', attrs=['bold'])
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking comms...")
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking flight controls...")
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking flight status...")
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking flight info...")
+        time.sleep(1.5)
+        electronicBeeps.beepSequential('loading1')
+        cprint(" - Checking flight help...")
+        time.sleep(2.5)
+        electronicBeeps.beepSequential('startup')
+        cprint("HARD Avionics check complete ✓ \n", 'yellow', attrs=['bold'])
+
+        time.sleep(2.5)
+        print(" - Flight preparations complete.")
+        electronicBeeps.beepSequential('loading1')
         time.sleep(1.0)
-        print("Going through flight preparations stage 1...")
-        time.sleep(2.0)
-        print("Stage 1 preparations complete.")
-        time.sleep(1.0)
-        print("Systems check...")
-        time.sleep(3.0)
-        print("Systems check complete.")
-        time.sleep(1.0)
-        print("Flight preparations complete.")
-        time.sleep(1.0)
-        print("All necessary check to start flight complete.")
+        cprint("\nAll necessary checks complete you are ready to go!!  ✓ \n", 'green', attrs=['bold'])
+        electronicBeeps.beepSequential('startup')
 
     def launchFlight(self=None):
         cprint("Function -launch flight started...", 'cyan', attrs=["blink"])
@@ -93,5 +133,3 @@ class FlightThreads:
 
     def flightHelp(self=None):
         pass
-
-

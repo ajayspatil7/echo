@@ -17,19 +17,13 @@ while True:
     DATE = datetime.today().strftime('%Y-%m-%d')
     TIME = datetime.today().strftime('%H:%M:%S:%p')
     try:
-        command = input((f"ECHO -> {DATE} @ {TIME} > "))
+        command = input(f"ECHO -> {DATE} @ {TIME} > ")
         # If command inspected is true: do the necessary operations
         if processesThreads.Processes().inspectCommandStage1(command) is True:
             processesThreads.Processes().log(command)
-
-            # Command processing and executing
-            if command in processor.terminalProcessor:
-                processor.terminalProcessor[command]()
-            elif command in processor.vehicleProcessor:
-                processor.vehicleProcessor[command]()
-            else:
-                print("Command not found")
-
+            processesThreads.Processes().inspectCommandStage2(command)
+            processesThreads.Processes().log(command)
+            processesThreads.Processes().signalEcho(command)
     except KeyboardInterrupt:
         print(colored(f"\nECHO V1 ended on {DATE}, at {TIME}", 'red'))
         exit(0)

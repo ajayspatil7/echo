@@ -7,13 +7,15 @@ from ECHO_V1.functionalEngine import threadsEngine
 # TODO: Process all the commands here and send the output to the terminalCenter
 
 processes = processesThreads.Processes
-E_threads = threadsEngine.EchoThreads
-V_threads = threadsEngine.FlightThreads
+E_threads = threadsEngine.EchoThreads  # Echo threads
+V_threads = threadsEngine.FlightThreads  # Flight threads
 
 terminalProcessor = {
     'echo --intro': E_threads.threadEchoIntro,
     'echo --time': E_threads.threadEchoTime,
     'echo --prepare for launch': E_threads.threadEchoPrepareForLaunch,
+    'echo --clear': E_threads.threadClearTerminal,
+    'echo --exit': processes.stopProcesses,
 }
 
 vehicleProcessor = {
@@ -25,3 +27,4 @@ vehicleProcessor = {
     'help': V_threads.flightHelp,
 }
 
+commandsStorage = [terminalProcessor, vehicleProcessor]
