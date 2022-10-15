@@ -10,3 +10,15 @@ def outText(text: str, level: str):
         termcolor.cprint(text, 'red')
     else:
         termcolor.cprint("Invalid level.", 'red')
+
+
+def echoLabel():
+    print("""
+
+███████╗ ░█████╗  ██╗  ██╗ ░█████╗
+██╔════╝ ██╔══██  ██║  ██║ ██╔══██╗
+█████╗   ██║  ██  ███████║ ██║░░██║
+██       ██║  ██╗ ██╔══██║ ██║░░██║
+███████╗ ╚█████╔╝ ██║  ██║ ╚█████╔╝
+╚══════╝  ╚════╝  ╚═╝  ╚═╝  ╚════╝  Version 1.0.0
+    """)

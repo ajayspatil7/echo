@@ -19,7 +19,7 @@ class EchoThreads:
     def threadEchoIntro(self=None):
         print('\nGetting info...')
         electronicBeeps.beepSequential('loading1', interval=0.09, loop=3)
-        #time.sleep(2.0)
+        time.sleep(2.0)
         termColor = termcolor
 
         termColor.cprint(

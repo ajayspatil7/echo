@@ -4,13 +4,13 @@ from datetime import datetime
 from ECHO_V1.commands_center import processesThreads
 from ECHO_V1.this_cpu import processor
 from termcolor import *
-from ECHO_V1.assets import assetsInfo
+from ECHO_V1.assets.assetsInfo import termOut
 
 DATE = datetime.today().strftime('%Y-%m-%d')
 TIME = datetime.today().strftime('%H:%M:%S:%p')
 # ECHO = cprint("ECHO", 'green', attrs=['bold'])
 # (f"ECHO -> {DATE} @ {TIME} > ")
-
+termOut.echoLabel()
 # assetsInfo.electronicBeeps.beepSequential('startup') Turn it on later on
 cprint(f"ECHO V1 started on {DATE} at {TIME} \n", 'green', attrs=['bold'])
 while True:

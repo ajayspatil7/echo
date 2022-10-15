@@ -57,7 +57,7 @@ class Processes:
         if command in processor.vehicleProcessor:
             processor.vehicleProcessor[command]()
 
-    # Get data from processor
+    # Does nothing as of now
     def getSignal(self, command: str) -> bool:
         self.command = command
         if self.inspectCommandStage1(command):
@@ -67,5 +67,14 @@ class Processes:
             return command, False
 
     # Stop the processes and exit the terminal
-    def stopProcesses(self=None):
-        exit(0)
+    def stopProcesses(self=None, command: str = None):
+        if command in commands.Commands().VALID_TERMINAL_OPERATIONS:
+            print("Stopping the processes")
+            time.sleep(1.0)
+            print("Exiting the terminal")
+            time.sleep(1.0)
+            exit(0)
+        else:
+            return False
+
+

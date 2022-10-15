@@ -1,6 +1,8 @@
 import time
 import playsound
 from termcolor import *
+
+
 defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicBeep8.mp3'
 defaultElectronicBeep2 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/trStartupBeep.mp3'
 _electronicBeep2 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicBeep6.mp3'
