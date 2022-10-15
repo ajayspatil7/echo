@@ -5,6 +5,8 @@ from termcolor import *
 
 defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicBeep8.mp3'
 defaultElectronicBeep2 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/trStartupBeep.mp3'
+defaultElectronicShutdown = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/shutdown.mp3'
+
 _electronicBeep2 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicBeep6.mp3'
 _electronicBeep3 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicBeep1.wav'
 _electronicBeep4 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicShortBeep.mp3'
@@ -30,6 +32,13 @@ def beepSequential(level: str, interval: float = None, loop: str = None):
             playsound.playsound(_electronicBeep3)
             time.sleep(0.5)
 
+    elif level == 'shutdown':
+        for y in range(3):
+            playsound.playsound(_electronicBeep4)
+            time.sleep(0.5)
+        time.sleep(1.0)
+        playsound.playsound(defaultElectronicShutdown)
+
     elif level == 'loading1':
         if loop is not None and interval is not None:
             for x in range(loop):
@@ -42,3 +51,4 @@ def beepSequential(level: str, interval: float = None, loop: str = None):
         cprint("Invalid beep level.", 'red')
 
 
+beepSequential('shutdown')

@@ -3,7 +3,7 @@ import os
 import time
 from ECHO_V1.commands_center import commands
 from datetime import datetime
-
+from ECHO_V1.assets.assetsInfo import electronicBeeps
 
 class Processes:
 
@@ -69,7 +69,8 @@ class Processes:
     # Stop the processes and exit the terminal
     def stopProcesses(self=None, command: str = None):
         if command in commands.Commands().VALID_TERMINAL_OPERATIONS:
-            print("Stopping the processes")
+            electronicBeeps.beepSequential('shutdown')
+            print("Stopping the processes...")
             time.sleep(1.0)
             print("Exiting the terminal")
             time.sleep(1.0)

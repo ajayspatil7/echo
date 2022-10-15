@@ -8,6 +8,7 @@ from _datetime import datetime
 from ECHO_V1.commands_center import commands
 import time
 from ECHO_V1.assets.assetsInfo import electronicBeeps
+from tqdm import tqdm
 
 # defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep8.mp3'
 # _electronicBeep2 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep6.mp3'
@@ -107,9 +108,11 @@ class FlightThreads:
         cprint("HARD Avionics check complete ✓ \n", 'yellow', attrs=['bold'])
 
         time.sleep(2.5)
-        print(" - Flight preparations complete.")
+        print(" - Performing final flight preparations.")
         electronicBeeps.beepSequential('loading1')
-        time.sleep(1.0)
+        for i in tqdm(range(300), desc="Final lift off check..."):
+            time.sleep(0.01)
+
         cprint("\nAll necessary checks complete you are ready to go!!  ✓ \n", 'green', attrs=['bold'])
         electronicBeeps.beepSequential('startup')
 

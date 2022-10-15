@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/ECHO_V1/functionalEngine" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ECHO_V1/this_cpu" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ECHO_V1/assets" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
