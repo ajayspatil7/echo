@@ -15,7 +15,8 @@ terminalProcessor = {
     'echo --time': E_threads.threadEchoTime,
     'echo --prepare for launch': E_threads.threadEchoPrepareForLaunch,
     'echo --clear': E_threads.threadClearTerminal,
-    'echo --exit': processes.stopProcesses,
+    'echo --exit': E_threads.threadEchoExit,
+    'echo --get log data': processes.getLogsData
 }
 
 vehicleProcessor = {

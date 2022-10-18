@@ -1,174 +1,39 @@
-start @ 01:03:23:AM on 2022-09-30 
-start @ 01:04:59:AM on 2022-09-30 
-start @ 01:05:21:AM on 2022-09-30 
-start @ 09:50:21:AM on 2022-09-30 
-start @ 09:52:19:AM on 2022-09-30 
-start @ 09:52:32:AM on 2022-09-30 
-start @ 08:57:23:AM on 2022-10-02 
-start @ 08:59:45:AM on 2022-10-02 
-start @ 08:59:50:AM on 2022-10-02 
-start @ 09:03:24:AM on 2022-10-02 
-start @ 09:03:55:AM on 2022-10-02 
-start @ 09:08:04:AM on 2022-10-02 
-exit @ 09:08:12:AM on 2022-10-02 
-start @ 09:17:42:AM on 2022-10-02 
-start @ 09:18:11:AM on 2022-10-02 
-start @ 09:18:44:AM on 2022-10-02 
-start @ 09:19:45:AM on 2022-10-02 
-start @ 09:33:00:AM on 2022-10-02 
-start @ 09:44:29:AM on 2022-10-02 
-exit @ 11:38:13:AM on 2022-10-08 
-echo --intro @ 10:31:48:AM on 2022-10-10 
-echo --time @ 10:32:01:AM on 2022-10-10 
-echo --intro @ 10:33:03:AM on 2022-10-10 
-echo --time @ 10:37:18:AM on 2022-10-10 
-echo --intro @ 10:40:43:AM on 2022-10-10 
-echo --intro @ 12:19:47:PM on 2022-10-10 
-echo --time @ 12:19:56:PM on 2022-10-10 
-start @ 12:20:20:PM on 2022-10-10 
-start @ 12:21:27:PM on 2022-10-10 
-start @ 12:22:07:PM on 2022-10-10 
-start @ 12:22:38:PM on 2022-10-10 
-help @ 12:23:43:PM on 2022-10-10 
-help @ 12:25:05:PM on 2022-10-10 
-start @ 12:25:07:PM on 2022-10-10 
-echo --start -terminal @ 12:26:17:PM on 2022-10-10 
-clear @ 12:27:11:PM on 2022-10-10 
-clear @ 12:30:21:PM on 2022-10-10 
-clear @ 12:31:17:PM on 2022-10-10 
-clear @ 12:31:20:PM on 2022-10-10 
-clear @ 12:31:42:PM on 2022-10-10 
-start @ 07:14:33:PM on 2022-10-10 
-start @ 07:14:42:PM on 2022-10-10 
-echo --intro @ 07:14:50:PM on 2022-10-10 
-echo --intro @ 07:14:53:PM on 2022-10-10 
-clear @ 07:14:57:PM on 2022-10-10 
-help @ 10:09:54:PM on 2022-10-10 
-help @ 10:09:54:PM on 2022-10-10 
-echo --testForLaunch @ 11:06:01:AM on 2022-10-11 
-echo --testForLaunch @ 11:06:01:AM on 2022-10-11 
-echo --intro @ 11:06:20:AM on 2022-10-11 
-echo --intro @ 11:06:23:AM on 2022-10-11 
-echo --time @ 11:16:26:AM on 2022-10-11 
-echo --time @ 11:16:26:AM on 2022-10-11 
-echo --time @ 11:20:53:AM on 2022-10-11 
-echo --time @ 11:20:53:AM on 2022-10-11 
-echo --time @ 11:21:37:AM on 2022-10-11 
-echo --time @ 11:21:37:AM on 2022-10-11 
-echo --time @ 11:21:59:AM on 2022-10-11 
-echo --time @ 11:21:59:AM on 2022-10-11 
-echo --time @ 11:22:32:AM on 2022-10-11 
-echo --time @ 11:22:32:AM on 2022-10-11 
-echo --time @ 11:22:57:AM on 2022-10-11 
-echo --time @ 11:22:57:AM on 2022-10-11 
-echo --time @ 11:26:55:AM on 2022-10-11 
-echo --time @ 11:26:55:AM on 2022-10-11 
-echo --time @ 11:27:17:AM on 2022-10-11 
-echo --time @ 11:37:42:AM on 2022-10-11 
-echo --intro @ 12:42:37:PM on 2022-10-11 
-echo --time @ 12:47:10:PM on 2022-10-11 
-echo --time @ 12:48:41:PM on 2022-10-11 
-start @ 12:48:57:PM on 2022-10-11 
-echo --intro @ 12:49:51:PM on 2022-10-11 
-echo --intro @ 12:51:07:PM on 2022-10-11 
-echo --intro @ 12:51:49:PM on 2022-10-11 
-echo --intro @ 12:52:07:PM on 2022-10-11 
-echo --intro @ 12:52:39:PM on 2022-10-11 
-start @ 12:56:23:PM on 2022-10-11 
-echo --intro @ 06:40:05:PM on 2022-10-11 
-echo --intro @ 06:47:26:PM on 2022-10-11 
-echo --time @ 06:48:38:PM on 2022-10-11 
-echo --intro @ 06:48:54:PM on 2022-10-11 
-echo --intro @ 06:52:04:PM on 2022-10-11 
-echo --intro @ 06:52:40:PM on 2022-10-11 
-echo --intro @ 06:57:06:PM on 2022-10-11 
-echo --intro @ 06:58:32:PM on 2022-10-11 
-echo --intro @ 06:58:44:PM on 2022-10-11 
-echo --intro @ 07:00:17:PM on 2022-10-11 
-echo --intro @ 07:03:49:PM on 2022-10-11 
-time @ 11:13:12:AM on 2022-10-13 
-echo --time @ 11:13:16:AM on 2022-10-13 
-echo --time @ 11:13:36:AM on 2022-10-13 
-clear @ 11:13:42:AM on 2022-10-13 
-echo --intro @ 11:22:34:AM on 2022-10-13 
-echo --intro @ 11:24:04:AM on 2022-10-13 
-echo --time @ 11:24:20:AM on 2022-10-13 
-echo --intro @ 11:25:01:AM on 2022-10-13 
-echo --intro @ 11:26:34:AM on 2022-10-13 
-echo --intro @ 11:26:45:AM on 2022-10-13 
-echo --intro @ 11:26:57:AM on 2022-10-13 
-echo --intro @ 11:27:40:AM on 2022-10-13 
-clear @ 11:32:18:AM on 2022-10-13 
-clear @ 11:36:16:AM on 2022-10-13 
-clear @ 11:38:47:AM on 2022-10-13 
-clear @ 11:40:13:AM on 2022-10-13 
-clear @ 11:40:25:AM on 2022-10-13 
-clear @ 11:41:08:AM on 2022-10-13 
-clear @ 11:44:05:AM on 2022-10-13 
-clear @ 11:45:07:AM on 2022-10-13 
-clear @ 11:46:40:AM on 2022-10-13 
-echo --intro @ 11:48:26:AM on 2022-10-13 
-echo --time @ 11:48:37:AM on 2022-10-13 
-echo --time @ 11:48:49:AM on 2022-10-13 
-clear @ 11:49:46:AM on 2022-10-13 
-echo --intro @ 11:53:00:AM on 2022-10-13 
-clear @ 11:53:04:AM on 2022-10-13 
-exit @ 11:53:10:AM on 2022-10-13 
-exit @ 11:55:31:AM on 2022-10-13 
-start @ 11:56:03:AM on 2022-10-13 
-exit @ 11:56:08:AM on 2022-10-13 
-exit @ 11:56:34:AM on 2022-10-13 
-info @ 12:05:35:PM on 2022-10-13 
-start @ 12:06:19:PM on 2022-10-13 
-start @ 12:09:32:PM on 2022-10-13 
-start @ 12:11:25:PM on 2022-10-13 
-start @ 12:13:02:PM on 2022-10-13 
-start @ 12:13:02:PM on 2022-10-13 
-start @ 12:13:20:PM on 2022-10-13 
-start @ 12:13:20:PM on 2022-10-13 
-start @ 12:14:28:PM on 2022-10-13 
-start @ 12:14:28:PM on 2022-10-13 
-start @ 12:17:55:PM on 2022-10-13 
-start @ 12:17:55:PM on 2022-10-13 
-start @ 12:19:17:PM on 2022-10-13 
-start @ 12:19:17:PM on 2022-10-13 
-start @ 12:21:14:PM on 2022-10-13 
-start @ 12:21:14:PM on 2022-10-13 
-start @ 12:23:55:PM on 2022-10-13 
-start @ 12:23:55:PM on 2022-10-13 
-start @ 12:33:43:PM on 2022-10-13 
-start @ 12:33:43:PM on 2022-10-13 
-start @ 12:35:58:PM on 2022-10-13 
-start @ 12:35:58:PM on 2022-10-13 
-start @ 12:57:29:PM on 2022-10-13 
-start @ 12:57:29:PM on 2022-10-13 
-exit @ 12:58:03:PM on 2022-10-13 
-exit @ 12:58:03:PM on 2022-10-13 
-start @ 10:12:57:PM on 2022-10-13 
-start @ 10:12:57:PM on 2022-10-13 
-help @ 10:16:12:PM on 2022-10-13 
-help @ 10:16:12:PM on 2022-10-13 
-echo --intro @ 10:17:18:PM on 2022-10-13 
-echo --intro @ 10:17:18:PM on 2022-10-13 
-start @ 10:19:13:PM on 2022-10-13 
-start @ 10:19:13:PM on 2022-10-13 
-echo --intro @ 10:19:47:PM on 2022-10-13 
-echo --intro @ 10:19:47:PM on 2022-10-13 
-clear @ 10:19:52:PM on 2022-10-13 
-clear @ 10:19:52:PM on 2022-10-13 
-start @ 11:24:22:AM on 2022-10-15 
-start @ 11:24:22:AM on 2022-10-15 
-exit @ 11:24:56:AM on 2022-10-15 
-exit @ 11:24:56:AM on 2022-10-15 
-exit @ 11:25:10:AM on 2022-10-15 
-exit @ 11:25:10:AM on 2022-10-15 
-exit @ 12:26:28:PM on 2022-10-15 
-exit @ 12:26:28:PM on 2022-10-15 
-clear @ 12:26:30:PM on 2022-10-15 
-clear @ 12:26:30:PM on 2022-10-15 
-start @ 03:35:10:PM on 2022-10-15 
-start @ 03:35:10:PM on 2022-10-15 
-start @ 03:40:12:PM on 2022-10-15 
-start @ 03:40:12:PM on 2022-10-15 
-start @ 03:45:18:PM on 2022-10-15 
-start @ 03:45:18:PM on 2022-10-15 
+exit|@ 10:28:55:PM on 2022-10-17 
+exit|@ 10:28:55:PM on 2022-10-17 
+exit|@ 10:28:55:PM on 2022-10-17 
+start|@ 10:28:58:PM on 2022-10-17 
+start|@ 10:28:58:PM on 2022-10-17 
+start|@ 10:28:58:PM on 2022-10-17 
+echo --get log data|@ 02:31:26:PM on 2022-10-18 
+echo --get log data|@ 02:31:26:PM on 2022-10-18 
+echo --get log data|@ 02:31:26:PM on 2022-10-18 
+echo --get log data|@ 02:32:04:PM on 2022-10-18 
+echo --get log data|@ 02:32:04:PM on 2022-10-18 
+echo --get log data|@ 02:32:04:PM on 2022-10-18 
+echo --get log data|@ 02:33:23:PM on 2022-10-18 
+echo --get log data|@ 02:33:23:PM on 2022-10-18 
+echo --get log data|@ 02:33:23:PM on 2022-10-18 
+echo --get log data|@ 02:34:08:PM on 2022-10-18 
+echo --get log data|@ 02:34:08:PM on 2022-10-18 
+echo --get log data|@ 02:34:08:PM on 2022-10-18 
+echo --get log data|@ 02:34:40:PM on 2022-10-18 
+echo --get log data|@ 02:34:40:PM on 2022-10-18 
+echo --get log data|@ 02:34:40:PM on 2022-10-18 
+echo --exit|@ 02:35:23:PM on 2022-10-18 
+echo --exit|@ 02:35:23:PM on 2022-10-18 
+echo --exit|@ 02:35:23:PM on 2022-10-18 
+echo --exit|@ 02:36:50:PM on 2022-10-18 
+echo --exit|@ 02:36:50:PM on 2022-10-18 
+echo --exit|@ 02:36:50:PM on 2022-10-18 
+echo --exit|@ 02:38:55:PM on 2022-10-18 
+echo --exit|@ 02:38:55:PM on 2022-10-18 
+echo --exit|@ 02:38:55:PM on 2022-10-18 
+echo --exit|@ 02:40:45:PM on 2022-10-18 
+echo --exit|@ 02:40:45:PM on 2022-10-18 
+echo --exit|@ 02:40:45:PM on 2022-10-18 
+echo --exit|@ 02:41:32:PM on 2022-10-18 
+echo --exit|@ 02:41:32:PM on 2022-10-18 
+echo --exit|@ 02:41:32:PM on 2022-10-18 
+echo --exit|@ 02:42:24:PM on 2022-10-18 
+echo --exit|@ 02:42:24:PM on 2022-10-18 
+echo --exit|@ 02:42:24:PM on 2022-10-18 

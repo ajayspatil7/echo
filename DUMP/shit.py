@@ -1,5 +1,15 @@
-from tqdm import tqdm
-import time
+from tabulate import tabulate
 
-for i in tqdm(range(300), desc="Final lift off check..."):
-    time.sleep(0.01)
+
+def main():
+    # Path: ROOT/main.py
+    fLogs = '/Users/ajay/PycharmProjects/echo/ECHOV1_LOGS/commandsLogsFailed'
+    pLogs = '/Users/ajay/PycharmProjects/echo/ECHOV1_LOGS/commandsLogsPassed'
+
+    # Get the data from the files
+    fLogsData = open(fLogs, 'r').readlines()
+    pLogsData = open(pLogs, 'r').readlines()
+
+
+main()
+

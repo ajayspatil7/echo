@@ -18,7 +18,7 @@ from tqdm import tqdm
 class EchoThreads:
 
     def threadEchoIntro(self=None):
-        print('\nGetting info...')
+        cprint('\nGetting info...\n', 'yellow', attrs=['bold'])
         electronicBeeps.beepSequential('loading1', interval=0.09, loop=3)
         time.sleep(2.0)
         termColor = termcolor
@@ -40,12 +40,13 @@ class EchoThreads:
         termColor.cprint("- You can test your rocket and its controls with ECHO_V1.")
         termColor.cprint("- We have got you covered with all the flight preparations.")
         termColor.cprint(colored("-" * 95, 'green'))
+        print("\n")
         processesThreads.Processes().log(self)
 
     def threadEchoTime(self=None):
-        electronicBeeps.beepSequential('startup')
-        cprint(f"{datetime.today().strftime('%Y-%m-%d')}", attrs=['bold'])
-        cprint(f"{datetime.today().strftime('%H:%M:%S:%p')}", attrs=['bold'])
+        electronicBeeps.beepSequential('loading1')
+        cprint(f"\nDate > {datetime.today().strftime('%Y-%m-%d')}", attrs=['bold'])
+        cprint(f"Time > {datetime.today().strftime('%H:%M:%S:%p')} \n", attrs=['bold'])
 
     def threadEchoPrepareForLaunch(self=None):
         print(commands.Commands.VALID_ECHO_COMMANDS['echo --prepareForLaunch'])
@@ -58,6 +59,25 @@ class EchoThreads:
 
     def threadClearTerminal(self):
         os.system('clear')
+
+    def threadEchoExit(self=None):
+
+        cprint('Quiting ECHO_V1...', 'red', attrs=['bold'])
+        electronicBeeps.beepSequential('loading1')
+        time.sleep(2.0)
+
+        cprint('Clearing memory...', 'red', attrs=['bold'])
+        electronicBeeps.beepSequential('loading1')
+        time.sleep(3.0)
+
+        electronicBeeps.beepSequential('loading1')
+        cprint('Saving logs...', 'red', attrs=['bold'])
+        time.sleep(2.0)
+
+        cprint('\nShutdown complete -safe to close', 'red', attrs=['bold'])
+        electronicBeeps.beepSequential('shutdown')
+
+        exit(0)
 
 
 class FlightThreads:

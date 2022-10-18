@@ -33,10 +33,6 @@ def beepSequential(level: str, interval: float = None, loop: str = None):
             time.sleep(0.5)
 
     elif level == 'shutdown':
-        for y in range(3):
-            playsound.playsound(_electronicBeep4)
-            time.sleep(0.5)
-        time.sleep(1.0)
         playsound.playsound(defaultElectronicShutdown)
 
     elif level == 'loading1':
@@ -50,5 +46,3 @@ def beepSequential(level: str, interval: float = None, loop: str = None):
     else:
         cprint("Invalid beep level.", 'red')
 
-
-beepSequential('shutdown')

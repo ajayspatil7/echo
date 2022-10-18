@@ -8,6 +8,8 @@ class Commands:
         'echo --prepareForLaunch': 'echoThreads.prepareForLaunch() \n',
         'echo --testForLaunch': 'echoThreads.testForLaunch() \n',
         'echo --start -terminal': 'echoThreads.startTerminal() \n',
+        'echo --get log data': 'processes.getLogsData() \n',
+        'echo --exit': 'echoThreads.threadEchoExit() \n',
     }
 
     VALID_TERMINAL_OPERATIONS = {
