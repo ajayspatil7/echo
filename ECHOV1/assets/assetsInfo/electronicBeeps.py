@@ -3,13 +3,13 @@ import playsound
 from termcolor import *
 
 
-defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicBeep8.mp3'
-defaultElectronicBeep2 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/trStartupBeep.mp3'
-defaultElectronicShutdown = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/shutdown.mp3'
+defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/ECHOV1/assets/assets_beeps/electronicBeep8.mp3'
+defaultElectronicBeep2 = '/Users/ajay/PycharmProjects/echo/ECHOV1/assets/assets_beeps/trStartupBeep.mp3'
+defaultElectronicShutdown = '/Users/ajay/PycharmProjects/echo/ECHOV1/assets/assets_beeps/shutdown.mp3'
 
-_electronicBeep2 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicBeep6.mp3'
-_electronicBeep3 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicBeep1.wav'
-_electronicBeep4 = '/Users/ajay/PycharmProjects/echo/ECHO_V1/assets/assets_beeps/electronicShortBeep.mp3'
+_electronicBeep2 = '/Users/ajay/PycharmProjects/echo/ECHOV1/assets/assets_beeps/electronicBeep6.mp3'
+_electronicBeep3 = '/Users/ajay/PycharmProjects/echo/ECHOV1/assets/assets_beeps/electronicBeep1.wav'
+_electronicBeep4 = '/Users/ajay/PycharmProjects/echo/ECHOV1/assets/assets_beeps/electronicShortBeep.mp3'
 
 
 def beepSequential(level: str, interval: float = None, loop: str = None):

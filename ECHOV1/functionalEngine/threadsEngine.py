@@ -3,11 +3,11 @@
 import os
 import termcolor
 from termcolor import *
-from ECHO_V1.commands_center import processesThreads
+from ECHOV1.commands_center import processesThreads
 from _datetime import datetime
-from ECHO_V1.commands_center import commands
+from ECHOV1.commands_center import commands
 import time
-from ECHO_V1.assets.assetsInfo import electronicBeeps
+from ECHOV1.assets.assetsInfo import electronicBeeps
 from tqdm import tqdm
 
 # defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep8.mp3'
@@ -24,32 +24,31 @@ class EchoThreads:
         termColor = termcolor
 
         termColor.cprint(
-            "ECHO_V1 is a space flight simulator that is designed to simulate a real rocket controls and flight.", attrs=['bold'])
-        termColor.cprint("ECHO_V1 is the first version of the ECHO series of space flight control simulators.", attrs=['bold'])
-        termColor.cprint("ECHO_V1 is a command line based simulator that is designed to be used on a terminal.", attrs=['bold'])
-        termColor.cprint("ECHO_V1 is designed to be used on a Mac OS X above & Linux terminal.", attrs=['bold'])
-        termColor.cprint("-" * 95, 'green', attrs=['blink'])
-        termColor.cprint("Overview of ECHO_V1:", 'green', attrs=['bold'])
+            "ECHOV1 is a space flight simulator that is designed to simulate a real rocket controls and flight.", attrs=['bold'])
+        termColor.cprint("ECHOV1 is the first version of the ECHO series of space flight control simulators.", attrs=['bold'])
+        termColor.cprint("ECHOV1 is a command line based simulator that is designed to be used on a terminal.", attrs=['bold'])
+        termColor.cprint("ECHOV1 is designed to be used on a Mac OS X above & Linux terminal.", attrs=['bold'])
+        termColor.cprint("-" * 95, 'green', attrs=['bold'])
+        termColor.cprint("Overview of ECHOV1:", 'green', attrs=['bold'])
         termColor.cprint("- From flight preparations to launch, ECHO does it all.")
         termColor.cprint("- It is safe and secure to use.")
         termColor.cprint("- Designed for professionals by professionals.")
-        termColor.cprint("- ECHO_V1 is a free and open source software.")
+        termColor.cprint("- ECHOV1 is a free and open source software.")
         termColor.cprint("- Everything is logged and can be accessed at any time.")
         termColor.cprint("- As it is a CLI based, you got all your controls at your fingertips.")
-        termColor.cprint("- Not just that, ECHO_V1 is a flight control system which can be connected with a real rocket.")
-        termColor.cprint("- You can test your rocket and its controls with ECHO_V1.")
+        termColor.cprint("- Not just that, ECHOV1 is a flight control system which can be connected with a real rocket.")
+        termColor.cprint("- You can test your rocket and its controls with ECHOV1.")
         termColor.cprint("- We have got you covered with all the flight preparations.")
-        termColor.cprint(colored("-" * 95, 'green'))
+        termColor.cprint(colored("-" * 95, 'green', attrs=['bold']))
         print("\n")
         processesThreads.Processes().log(self)
 
     def threadEchoTime(self=None):
         electronicBeeps.beepSequential('loading1')
-        cprint(f"\nDate > {datetime.today().strftime('%Y-%m-%d')}", attrs=['bold'])
         cprint(f"Time > {datetime.today().strftime('%H:%M:%S:%p')} \n", attrs=['bold'])
 
     def threadEchoPrepareForLaunch(self=None):
-        print(commands.Commands.VALID_ECHO_COMMANDS['echo --prepareForLaunch'])
+        print("Command passed the test")
 
     def threadEchoTestForLaunch(self=None):
         print(commands.Commands.VALID_ECHO_COMMANDS['echo --testForLaunch'])
@@ -57,12 +56,12 @@ class EchoThreads:
     def threadEchoStartTerminal(self=None):
         print(commands.Commands.VALID_ECHO_COMMANDS['echo --start -terminal'])
 
-    def threadClearTerminal(self):
+    def threadClearTerminal(self=None):
         os.system('clear')
 
     def threadEchoExit(self=None):
 
-        cprint('Quiting ECHO_V1...', 'red', attrs=['bold'])
+        cprint('Quiting ECHOV1...', 'red', attrs=['bold'])
         electronicBeeps.beepSequential('loading1')
         time.sleep(2.0)
 

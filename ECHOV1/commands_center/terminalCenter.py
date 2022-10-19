@@ -3,9 +3,9 @@ import importlib
 import os
 from termcolor import *
 from datetime import datetime
-from ECHO_V1.this_cpu import processor
-from ECHO_V1.assets.assetsInfo import termOut
-from ECHO_V1.commands_center import processesThreads
+from ECHOV1.this_cpu import processor
+from ECHOV1.assets.assetsInfo import termOut
+from ECHOV1.commands_center import processesThreads
 
 DATE = datetime.today().strftime('%Y-%m-%d')
 TIME = datetime.today().strftime('%H:%M:%S:%p')

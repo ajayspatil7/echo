@@ -4,10 +4,11 @@ import time
 
 import termcolor
 
-from ECHO_V1.commands_center import commands
+from ECHOV1.commands_center import commands
 from datetime import datetime
-from ECHO_V1.assets.assetsInfo import electronicBeeps
+from ECHOV1.assets.assetsInfo import electronicBeeps
 from termcolor import *
+
 
 class Processes:
 
@@ -28,7 +29,7 @@ class Processes:
 
     def inspectCommandStage2(self, command: str) -> bool:
         # Check if the command is in processor.terminalProcessor and processor.vehicleProcessor
-        from ECHO_V1.this_cpu import processor
+        from ECHOV1.this_cpu import processor
         if command in processor.terminalProcessor or command in processor.vehicleProcessor or command in processor.processes:
             return True
         else:
@@ -42,23 +43,23 @@ class Processes:
         # Log the command to a file in a table format
         # Log the command to the log file if processes is true
         if self.inspectCommandStage1(command) is True:
-            with open('/Users/ajay/PycharmProjects/echo/ECHOV1_LOGS/commandsLogsPassed', 'a') as file:
+            with open('/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/commandsLogsPassed', 'a') as file:
                 file.write(f"{command}|@ {log_TIME} on {log_DATE} \n")
 
         if self.inspectCommandStage1(command) is False:
-            with open('/Users/ajay/PycharmProjects/echo/ECHOV1_LOGS/commandsLogsFailed', 'a') as invFile:
+            with open('/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/commandsLogsFailed', 'a') as invFile:
                 invFile.write(f"{command}|@ {log_TIME} on {log_DATE} \n")
 
     # Function to show the terminal info
 
     def showTerminalInfo(self):
-        from ECHO_V1.functionalEngine import threadsEngine
+        from ECHOV1.functionalEngine import threadsEngine
         time.sleep(1.0)
         threadsEngine.echoThreads.threadEchoIntro(None)
 
     # Get data from processor
     def signalEcho(self, command: str) -> bool:
-        from ECHO_V1.this_cpu import processor
+        from ECHOV1.this_cpu import processor
         if command in processor.terminalProcessor:
             processor.terminalProcessor[command]()
         elif command in processor.vehicleProcessor:
@@ -80,16 +81,16 @@ class Processes:
         TIME = datetime.today().strftime('%H:%M:%S:%p')
 
         if command == 'ENTRY':
-            with open('/Users/ajay/PycharmProjects/echo/ECHOV1_LOGS/entryExitLogs.txt', 'a') as file:
+            with open('/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/entryExitLogs.txt', 'a') as file:
                 file.write(f"[{command} @ -------------------- {TIME} on {DATE} \n")
         if command == 'EXIT':
-            with open('/Users/ajay/PycharmProjects/echo/ECHOV1_LOGS/entryExitLogs.txt', 'a') as file:
+            with open('/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/entryExitLogs.txt', 'a') as file:
                 file.write(f"{command} @ --------------- {TIME} on {DATE}] \n")
 
     def getLogsData(self=None):
 
-        fLogs = '/Users/ajay/PycharmProjects/echo/ECHOV1_LOGS/commandsLogsFailed'
-        pLogs = '/Users/ajay/PycharmProjects/echo/ECHOV1_LOGS/commandsLogsPassed'
+        fLogs = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/commandsLogsFailed'
+        pLogs = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/commandsLogsPassed'
 
         # Get the data from the files
         fLogsData = open(fLogs, 'r').readlines()
@@ -104,3 +105,33 @@ class Processes:
         elif logType == 'F':
             for x in fLogsData:
                 termcolor.cprint(x, 'blue', attrs=['bold'])
+
+    # Function to print about the author in the terminal
+    def credits(self=None):
+        cprint("\nAuthor : AJAY S PATIL", 'green', attrs=['bold'])
+        cprint("Project name : ECHO", 'green', attrs=['bold'])
+        cprint("Version : 1.0", 'green', attrs=['bold'])
+        cprint("Date : Oct 2022", 'green', attrs=['bold'])
+
+    # Function to print the help menu
+    def helpEcho(self=None):
+        # Print the help commands menue, where the user can see the commands and their description
+        # Get all the commands from commands.py file
+        from ECHOV1.commands_center import commands
+        from tabulate import tabulate
+
+        commandsComms = commands.Commands()
+
+        # Print the keys and values in a table format
+        # Print the values in green color
+        # Print the keys in bold
+
+        cprint(tabulate(commandsComms.VALID_ECHO_COMMANDS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'cyan')
+        cprint(tabulate(commandsComms.VALID_TERMINAL_OPERATIONS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'cyan')
+        cprint(tabulate(commandsComms.VALID_FLIGHT_OPERATIONS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'cyan')
+
+        # for x in commandsComms.VALID_ECHO_COMMANDS.keys():
+        #     print(f"{x}: {commandsComms.VALID_ECHO_COMMANDS[x]}")
+        # Get all the commands usage from
+        pass
+
