@@ -25,7 +25,7 @@ vehicleProcessor = {
     'abort': V_threads.abortFlight,
     'status': V_threads.flightStatus,
     'info': V_threads.flightInfo,
-    'help': V_threads.flightHelp,
+    'help': processes.helpEcho
 }
 
 commandsStorage = [terminalProcessor, vehicleProcessor, processes]

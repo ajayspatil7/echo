@@ -122,13 +122,9 @@ class Processes:
 
         commandsComms = commands.Commands()
 
-        # Print the keys and values in a table format
-        # Print the values in green color
-        # Print the keys in bold
-
-        cprint(tabulate(commandsComms.VALID_ECHO_COMMANDS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'cyan')
-        cprint(tabulate(commandsComms.VALID_TERMINAL_OPERATIONS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'cyan')
-        cprint(tabulate(commandsComms.VALID_FLIGHT_OPERATIONS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'cyan')
+        cprint(tabulate(commandsComms.VALID_ECHO_COMMANDS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'magenta')
+        cprint(tabulate(commandsComms.VALID_TERMINAL_OPERATIONS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'magenta')
+        cprint(tabulate(commandsComms.VALID_FLIGHT_OPERATIONS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'magenta')
 
         # for x in commandsComms.VALID_ECHO_COMMANDS.keys():
         #     print(f"{x}: {commandsComms.VALID_ECHO_COMMANDS[x]}")

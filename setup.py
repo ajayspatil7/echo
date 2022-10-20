@@ -9,7 +9,9 @@ from setuptools import setup
 
 APP = ['echov1.py']
 DATA_FILES = []
-OPTIONS = {}
+OPTIONS = {
+    'iconfile': '/Users/ajay/PycharmProjects/echo/APPICONS/Assets.xcassets/AppIcon.appiconset/mainIcon.png'
+}
 
 setup(
     app=APP,
