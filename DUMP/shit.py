@@ -11,5 +11,4 @@ def main():
     pLogsData = open(pLogs, 'r').readlines()
 
 
-main()
 
