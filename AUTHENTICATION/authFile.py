@@ -8,23 +8,26 @@ from tabulate import tabulate
 def credentialsLog(user=None, logData=None, log_type=None):
     DATE = datetime.today().strftime('%Y-%m-%d')
     TIME = datetime.today().strftime('%I:%M:%S:%p')
-    filePath = '/Users/ajay/PycharmProjects/echo/AUTHENTICATION/userLogs.txt'
+    filePath = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/userLogs.txt'
 
+    # To moitor login and logout activities
     if user and logData is not None:
         timeStamp = str(datetime.today()).split('.')[0]
-        filePath = '/Users/ajay/PycharmProjects/echo/AUTHENTICATION/userLogs.txt'
+        filePath = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/userLogs.txt'
         with open(filePath, 'a') as credFile:
-            credFile.write(f"{user}         ::         {logData} @ {TIME} on {DATE}\n")
+            # Append to the file with exact width spacing
+            credFile.write(f"{user:20s}::{logData:20s} -> {TIME:5s} -> {DATE}\n")
 
+    # To monitor the start and stop of authentication
     if logData is not None:
         if logData is type(str):
             with open(filePath, 'a') as credFile:
-                credFile.write(f"{logData}       ::         @ {TIME} ::  on {DATE} \n")
+                credFile.write(f"{logData:20s} @ {TIME:20s} -> {DATE} \n")
 
     if str(log_type).lower() == 'manually':
-        entryExitLog = '/Users/ajay/PycharmProjects/echo/AUTHENTICATION/entryExitLogs.txt'
+        entryExitLog = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/authEntryExitLogs.txt'
         with open(entryExitLog, 'a') as credFile:
-            credFile.write(f"{logData} @ {TIME} on {DATE}\n")
+            credFile.write(f"{logData:35s} @ {TIME:10s} -> {DATE} \n")
     else:
         pass
 
@@ -36,7 +39,7 @@ def credentialsLog(user=None, logData=None, log_type=None):
 
 
 def login():
-    credentialsLog(logData='Login function started!', log_type='manually')
+    credentialsLog(logData='<Login function started!>', log_type='manually')
     userID = input("U-ID > ")
     passWD = input("Key-CODE > ")
 
@@ -45,31 +48,45 @@ def login():
     passWD = hashlib.sha256(passWD.encode()).hexdigest()
     userID = hashlib.sha256(userID.encode()).hexdigest()
 
-    filePath = '/Users/ajay/PycharmProjects/echo/AUTHENTICATION/usersData.txt'
-    searchFormat = f"{userID} : {passWD}"
+    filePath = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/usersData.txt'
     # Check the userID and passWD in usersData.txt file and return true if found else return false
-    # with open(filePath) as authFile:
-    #     for i in authFile.readlines():
-    #         if i in searchFormat:
-    #             print("Login Successful!")
-    #             return True
-    #         else:
-    #             print("Login Failed!")
-    #             #credentialsLog(userID, logData='Login Failed!')
-    #             #credentialsLog(logData='Login function stopped', log_type='manually')
-    #             return False
-
-    file = open('/Users/ajay/PycharmProjects/echo/AUTHENTICATION/usersData.txt', 'r')
-
-    for x in file:
-        if searchFormat in x:
-            print("Login Successful!")
+    with open(filePath) as authFile:
+        for i in authFile.readlines():
+            if i.split(":")[0].strip() == userID and i.split(":")[1].strip() == passWD:
+                credentialsLog(user=userID, logData='Login Successful')
+                print(True)
+                credentialsLog(logData='<Login function completed!>', log_type='manually')
+                return True
+            # login
         else:
-            print("-Login Failed!")
+            credentialsLog(user=userID, logData='Login Failed')
+            print(False)
+            credentialsLog(logData='<Login function completed!>', log_type='manually')
+            return False
+    # incorrect creds
+
+        # for i in authFile.readlines():
+        #     temp = i.split(':')
+        #     if userID == temp[0] and passWD == temp[1].strip():
+        #         credentialsLog(user=userID, logData='Login Successful!')
+        #         print("Found")
+        #         return True
+        #     else:
+        #         credentialsLog(user=userID, logData='Login Failed!')
+        #         print("Not Found")
+        #         return False
+
+            # if userID in i and passWD in i:
+            #     credentialsLog(user=userID, logData='Login Successfull!')
+            #     print("Login Successfull!")
+            #     return True
+            # else:
+            #     print("Login Failed!")
+            #     return False
 
 
 def createAccount() -> str:
-    credentialsLog(logData='Create Account Started', log_type="manually")
+    credentialsLog(logData='<Create Account Started>', log_type="manually")
 
     userID = input("UserID > ")
     passWD = input("PassKey > ")
@@ -79,35 +96,63 @@ def createAccount() -> str:
     userID = hashlib.sha256(userID.encode()).hexdigest()
 
     # Path to store the data
-    filePath = '/Users/ajay/PycharmProjects/echo/AUTHENTICATION/usersData.txt'
+    filePath = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/usersData.txt'
 
     with open(filePath, 'a') as authFile:
         authFile.write(f"{userID} : {passWD}\n")
-        credentialsLog(logData='Account Created Successfully!')
+        cprint(f"Account Created Successfully!", 'green')
+        credentialsLog(logData='<Account Created Successfully!>')
 
     # To log the time of user account creation stopped.
-    credentialsLog(logData='Create Account Completed!!', log_type='manually')
+    credentialsLog(logData='<Create Account Completed!!>', log_type='manually')
 
 
 def logout() -> str:
+    credentialsLog(logData='<Logout function started!>', log_type='manually')
     os.system('clear')
+    credentialsLog(logData='<Logout function completed!>', log_type='manually')
+
+
+authenticationMap = {
+    'login': login,
+    'create': createAccount,
+    'logout': logout
+}
 
 
 def startAuthentication():
-    # credentialsLog(logData="Authentication Started", log_type='manually')
-    # cprint("""Encrypted by echo's secure computing engine""", 'magenta')
-    # cprint("""Developed by QUASAR industries -Ajay""", 'magenta')
+    credentialsLog(logData="<Authentication Started>", log_type='manually')
     cprint("----ECHO Secure Authentication Systems----\n", 'green', attrs=['bold'])
+    cprint("1. Login\n2. Create Account\n3. Exit\n", 'cyan', attrs=['underline'])
 
-    login()
+    count = 0
+    choice = input("Type your choice (login for Login) > ")
 
-    credentialsLog(logData="Authentication stopped", log_type='manually')
+    while choice != 'exit':
+        if choice in authenticationMap.keys():
+            authenticationMap[choice]()
+        else:
+            cprint("Invalid Choice!!", 'red', attrs=['bold'])
+            count += 1
+            if count == 3:
+                cprint("Too many invalid choices! Exiting...", 'red', attrs=['bold'])
+                break
+        choice = input("Type your choice (login for Login) > ")
 
+    choice = choice.lower()
+    # Dictonary comprehension to call the values
+    if choice in authenticationMap.keys():
+        authenticationMap[choice]()
+
+    credentialsLog(logData="<Authentication stopped>", log_type='manually')
+
+
+# Users in usersData.txt file (Ajay, Praju, Ajju, None)
 
 try:
     startAuthentication()
 except KeyboardInterrupt:
-    credentialsLog(logData="Authentication FORCE stopped", log_type='manually')
+    credentialsLog(logData="<Authentication FORCE stopped>", log_type='manually')
     print("Exiting...")
     exit()
 

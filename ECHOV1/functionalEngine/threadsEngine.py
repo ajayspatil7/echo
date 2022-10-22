@@ -75,7 +75,8 @@ class EchoThreads:
 
         cprint('\nShutdown complete -safe to close', 'red', attrs=['bold'])
         electronicBeeps.beepSequential('shutdown')
-
+        from ECHOV1.commands_center import processesThreads
+        processesThreads.Processes.entryExitLogger(None, 'EXIT')
         exit(0)
 
 

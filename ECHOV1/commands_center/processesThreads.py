@@ -1,9 +1,8 @@
 # Operations performed when a command is called from the terminal.
 import os
 import time
-
+import signal
 import termcolor
-
 from ECHOV1.commands_center import commands
 from datetime import datetime
 from ECHOV1.assets.assetsInfo import electronicBeeps
@@ -78,14 +77,17 @@ class Processes:
 
     def entryExitLogger(self, command: str):
         DATE = datetime.today().strftime('%Y-%m-%d')
-        TIME = datetime.today().strftime('%H:%M:%S:%p')
+        TIME = datetime.today().strftime('%I:%M:%S:%p')
 
         if command == 'ENTRY':
             with open('/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/entryExitLogs.txt', 'a') as file:
-                file.write(f"[{command} @ -------------------- {TIME} on {DATE} \n")
-        if command == 'EXIT':
+                file.write(f"[{command:1s}-> @ {TIME:5s} > {DATE}")
+        elif command == 'EXIT':
             with open('/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/entryExitLogs.txt', 'a') as file:
-                file.write(f"{command} @ --------------- {TIME} on {DATE}] \n")
+                file.write(f" > PROTECTED {command:1s}  @ {TIME:10s} on {DATE}] \n")
+        elif command == 'FORCE-EXIT':
+            with open('/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/entryExitLogs.txt', 'a') as file:
+                file.write(f" > {command:1s}      @ {TIME:10s} on {DATE}] \n")
 
     def getLogsData(self=None):
 
@@ -122,12 +124,14 @@ class Processes:
 
         commandsComms = commands.Commands()
 
-        cprint(tabulate(commandsComms.VALID_ECHO_COMMANDS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'magenta')
-        cprint(tabulate(commandsComms.VALID_TERMINAL_OPERATIONS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'magenta')
-        cprint(tabulate(commandsComms.VALID_FLIGHT_OPERATIONS.items(), headers=['Command', 'Description'], tablefmt='psql'), 'magenta')
+        cprint(tabulate(commandsComms.VALID_ECHO_COMMANDS.items(), headers=['Command', 'Description'], tablefmt='psql'),
+               'magenta')
+        cprint(tabulate(commandsComms.VALID_TERMINAL_OPERATIONS.items(), headers=['Command', 'Description'],
+                        tablefmt='psql'), 'magenta')
+        cprint(tabulate(commandsComms.VALID_FLIGHT_OPERATIONS.items(), headers=['Command', 'Description'],
+                        tablefmt='psql'), 'magenta')
 
         # for x in commandsComms.VALID_ECHO_COMMANDS.keys():
         #     print(f"{x}: {commandsComms.VALID_ECHO_COMMANDS[x]}")
         # Get all the commands usage from
         pass
-
