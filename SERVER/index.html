@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><html>
+  <head>
+    <title>Input Form</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="input_field">
+      <button type="button" id="submit_button">Submit</button>
+    </form>
+
+    <script>
+      // get a reference to the input field and submit button
+      const inputField = document.getElementById('input_field');
+      const submitButton = document.getElementById('submit_button');
+
+      // add an event listener to the submit button that sends the input value to the server
+      submitButton.addEventListener('click', () => {
+        const inputValue = inputField.value;
+
+        // send the input value to the server using an HTTP POST request
+        fetch('/', {
+          method: 'POST',
+          body: inputValue
+        });
+      });
+    </script>
+  </body>
+</html>

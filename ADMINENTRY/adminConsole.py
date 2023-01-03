@@ -1,4 +1,6 @@
 from AUTHENTICATION import authFile
 
 
-authFile.startAuthentication()
+if __name__ == '__main__':
+    authFile.startAuthentication()
+    print(type(authFile.startAuthentication()))

@@ -101,3 +101,116 @@
 <Login function started!>           @ 07:34:49:PM -> 2022-10-22 
 <Login function completed!>         @ 07:34:52:PM -> 2022-10-22 
 <Authentication stopped>            @ 07:34:54:PM -> 2022-10-22 
+<Authentication Started>            @ 01:42:24:PM -> 2022-11-22 
+<Authentication stopped>            @ 01:42:36:PM -> 2022-11-22 
+<Authentication Started>            @ 01:42:36:PM -> 2022-11-22 
+<Authentication Started>            @ 01:43:08:PM -> 2022-11-22 
+<Login function started!>           @ 01:43:11:PM -> 2022-11-22 
+<Authentication FORCE stopped>      @ 01:43:38:PM -> 2022-11-22 
+<Authentication Started>            @ 01:43:39:PM -> 2022-11-22 
+<Create Account Started>            @ 01:43:47:PM -> 2022-11-22 
+<Create Account Completed!!>        @ 01:44:19:PM -> 2022-11-22 
+<Login function started!>           @ 01:44:24:PM -> 2022-11-22 
+<Login function completed!>         @ 01:44:30:PM -> 2022-11-22 
+<Authentication FORCE stopped>      @ 01:44:36:PM -> 2022-11-22 
+<Authentication Started>            @ 11:50:28:AM -> 2022-11-29 
+<Create Account Started>            @ 11:50:35:AM -> 2022-11-29 
+<Create Account Completed!!>        @ 11:50:42:AM -> 2022-11-29 
+<Login function started!>           @ 11:50:48:AM -> 2022-11-29 
+<Login function completed!>         @ 11:50:54:AM -> 2022-11-29 
+<Authentication FORCE stopped>      @ 11:51:01:AM -> 2022-11-29 
+<Authentication Started>            @ 11:51:21:AM -> 2022-11-29 
+<Login function started!>           @ 11:51:24:AM -> 2022-11-29 
+<Login function completed!>         @ 11:51:34:AM -> 2022-11-29 
+<Login function started!>           @ 11:51:46:AM -> 2022-11-29 
+<Login function completed!>         @ 11:51:55:AM -> 2022-11-29 
+<Authentication stopped>            @ 11:51:58:AM -> 2022-11-29 
+<Authentication Started>            @ 11:54:24:AM -> 2022-11-29 
+<Authentication FORCE stopped>      @ 11:54:27:AM -> 2022-11-29 
+<Authentication Started>            @ 11:54:35:AM -> 2022-11-29 
+<Authentication FORCE stopped>      @ 11:54:36:AM -> 2022-11-29 
+<Authentication Started>            @ 11:54:47:AM -> 2022-11-29 
+<Authentication FORCE stopped>      @ 11:54:48:AM -> 2022-11-29 
+<Authentication Started>            @ 11:54:59:AM -> 2022-11-29 
+<Authentication FORCE stopped>      @ 11:55:00:AM -> 2022-11-29 
+<Authentication Started>            @ 02:39:18:PM -> 2022-11-29 
+<Login function started!>           @ 02:39:23:PM -> 2022-11-29 
+<Login function completed!>         @ 02:39:30:PM -> 2022-11-29 
+<Login function started!>           @ 02:39:30:PM -> 2022-11-29 
+<Authentication FORCE stopped>      @ 02:39:54:PM -> 2022-11-29 
+<Authentication Started>            @ 02:39:54:PM -> 2022-11-29 
+<Login function started!>           @ 02:40:02:PM -> 2022-11-29 
+<Login function completed!>         @ 02:40:17:PM -> 2022-11-29 
+<Login function started!>           @ 02:40:17:PM -> 2022-11-29 
+<Authentication FORCE stopped>      @ 02:40:23:PM -> 2022-11-29 
+<Authentication Started>            @ 02:41:06:PM -> 2022-11-29 
+<Login function started!>           @ 02:41:11:PM -> 2022-11-29 
+<Login function completed!>         @ 02:41:16:PM -> 2022-11-29 
+<Login function started!>           @ 02:41:16:PM -> 2022-11-29 
+<Login function completed!>         @ 02:41:22:PM -> 2022-11-29 
+<Authentication Started>            @ 02:41:31:PM -> 2022-11-29 
+<Login function started!>           @ 02:41:33:PM -> 2022-11-29 
+<Login function completed!>         @ 02:41:36:PM -> 2022-11-29 
+<Login function started!>           @ 02:41:36:PM -> 2022-11-29 
+<Login function completed!>         @ 02:41:41:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:41:44:PM -> 2022-11-29 
+<Authentication Started>            @ 02:41:47:PM -> 2022-11-29 
+<Login function started!>           @ 02:41:53:PM -> 2022-11-29 
+<Login function completed!>         @ 02:42:08:PM -> 2022-11-29 
+<Login function started!>           @ 02:42:08:PM -> 2022-11-29 
+<Login function completed!>         @ 02:42:14:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:42:19:PM -> 2022-11-29 
+<Authentication Started>            @ 02:44:08:PM -> 2022-11-29 
+<Authentication Started>            @ 02:45:43:PM -> 2022-11-29 
+<Login function started!>           @ 02:45:48:PM -> 2022-11-29 
+<Login function completed!>         @ 02:45:55:PM -> 2022-11-29 
+<Login function started!>           @ 02:45:55:PM -> 2022-11-29 
+<Login function completed!>         @ 02:46:26:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:46:30:PM -> 2022-11-29 
+<Authentication Started>            @ 02:47:07:PM -> 2022-11-29 
+<Login function started!>           @ 02:47:12:PM -> 2022-11-29 
+<Login function completed!>         @ 02:47:23:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:47:37:PM -> 2022-11-29 
+<Authentication Started>            @ 02:47:40:PM -> 2022-11-29 
+<Login function started!>           @ 02:47:44:PM -> 2022-11-29 
+<Login function completed!>         @ 02:48:02:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:48:23:PM -> 2022-11-29 
+<Authentication Started>            @ 02:48:45:PM -> 2022-11-29 
+<Login function started!>           @ 02:48:50:PM -> 2022-11-29 
+<Login function completed!>         @ 02:49:06:PM -> 2022-11-29 
+<Create Account Started>            @ 02:49:15:PM -> 2022-11-29 
+<Create Account Completed!!>        @ 02:49:21:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:49:24:PM -> 2022-11-29 
+<Authentication Started>            @ 02:49:37:PM -> 2022-11-29 
+<Login function started!>           @ 02:49:41:PM -> 2022-11-29 
+<Login function completed!>         @ 02:49:49:PM -> 2022-11-29 
+<Login function started!>           @ 02:49:49:PM -> 2022-11-29 
+<Login function completed!>         @ 02:50:00:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:50:00:PM -> 2022-11-29 
+<Authentication Started>            @ 02:53:44:PM -> 2022-11-29 
+<Login function started!>           @ 02:53:49:PM -> 2022-11-29 
+<Login function completed!>         @ 02:53:58:PM -> 2022-11-29 
+<Login function started!>           @ 02:53:58:PM -> 2022-11-29 
+<Login function completed!>         @ 02:54:03:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:54:03:PM -> 2022-11-29 
+<Authentication Started>            @ 02:54:54:PM -> 2022-11-29 
+<Login function started!>           @ 02:54:58:PM -> 2022-11-29 
+<Login function completed!>         @ 02:55:03:PM -> 2022-11-29 
+<Login function started!>           @ 02:55:03:PM -> 2022-11-29 
+<Login function completed!>         @ 02:55:10:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:55:10:PM -> 2022-11-29 
+<Authentication Started>            @ 02:55:29:PM -> 2022-11-29 
+<Login function started!>           @ 02:55:32:PM -> 2022-11-29 
+<Authentication FORCE stopped>      @ 02:55:35:PM -> 2022-11-29 
+<Authentication Started>            @ 02:55:35:PM -> 2022-11-29 
+<Login function started!>           @ 02:55:38:PM -> 2022-11-29 
+<Login function completed!>         @ 02:55:55:PM -> 2022-11-29 
+<Login function started!>           @ 02:55:55:PM -> 2022-11-29 
+<Login function completed!>         @ 02:56:01:PM -> 2022-11-29 
+<Authentication stopped>            @ 02:56:01:PM -> 2022-11-29 
+<Authentication Started>            @ 10:43:01:AM -> 2022-12-08 
+<Login function started!>           @ 10:43:05:AM -> 2022-12-08 
+<Login function completed!>         @ 10:43:10:AM -> 2022-12-08 
+<Login function started!>           @ 10:43:10:AM -> 2022-12-08 
+<Login function completed!>         @ 10:43:18:AM -> 2022-12-08 
+<Authentication stopped>            @ 10:43:18:AM -> 2022-12-08 

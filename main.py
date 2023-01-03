@@ -1,7 +1,7 @@
 
 
 if __name__ == '__main__':
-    from ECHOV1.commands_center import terminalCenter
+    from ECHOV1.commands_center import echo
     main()
 
 

@@ -9,6 +9,7 @@ from ECHOV1.commands_center import commands
 import time
 from ECHOV1.assets.assetsInfo import electronicBeeps
 from tqdm import tqdm
+from ATTRIBUTES.labels import attrLabels
 
 # defaultElectronicBeep1 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep8.mp3'
 # _electronicBeep2 = '/Users/ajay/PycharmProjects/echo/assets/electronicBeep6.mp3'
@@ -22,39 +23,23 @@ class EchoThreads:
         electronicBeeps.beepSequential('loading1', interval=0.09, loop=3)
         time.sleep(2.0)
         termColor = termcolor
-
-        termColor.cprint(
-            "ECHOV1 is a space flight simulator that is designed to simulate a real rocket controls and flight.", attrs=['bold'])
-        termColor.cprint("ECHOV1 is the first version of the ECHO series of space flight control simulators.", attrs=['bold'])
-        termColor.cprint("ECHOV1 is a command line based simulator that is designed to be used on a terminal.", attrs=['bold'])
-        termColor.cprint("ECHOV1 is designed to be used on a Mac OS X above & Linux terminal.", attrs=['bold'])
-        termColor.cprint("-" * 95, 'green', attrs=['bold'])
-        termColor.cprint("Overview of ECHOV1:", 'green', attrs=['bold'])
-        termColor.cprint("- From flight preparations to launch, ECHO does it all.")
-        termColor.cprint("- It is safe and secure to use.")
-        termColor.cprint("- Designed for professionals by professionals.")
-        termColor.cprint("- ECHOV1 is a free and open source software.")
-        termColor.cprint("- Everything is logged and can be accessed at any time.")
-        termColor.cprint("- As it is a CLI based, you got all your controls at your fingertips.")
-        termColor.cprint("- Not just that, ECHOV1 is a flight control system which can be connected with a real rocket.")
-        termColor.cprint("- You can test your rocket and its controls with ECHOV1.")
-        termColor.cprint("- We have got you covered with all the flight preparations.")
-        termColor.cprint(colored("-" * 95, 'green', attrs=['bold']))
-        print("\n")
+        attrLabels.echoIntroLabels()
         processesThreads.Processes().log(self)
 
     def threadEchoTime(self=None):
-        electronicBeeps.beepSequential('loading1')
         cprint(f"Time > {datetime.today().strftime('%H:%M:%S:%p')} \n", attrs=['bold'])
+
+    def threadEchoDate(self=None):
+        cprint(f"Date > {datetime.today().strftime('%Y-%m-%d')}\n", attrs=['bold'])
 
     def threadEchoPrepareForLaunch(self=None):
         print("Command passed the test")
 
     def threadEchoTestForLaunch(self=None):
-        print(commands.Commands.VALID_ECHO_COMMANDS['echo --testForLaunch'])
+        print('Command passed the test')
 
     def threadEchoStartTerminal(self=None):
-        print(commands.Commands.VALID_ECHO_COMMANDS['echo --start -terminal'])
+        print('Command passed the test')
 
     def threadClearTerminal(self=None):
         os.system('clear')
@@ -78,6 +63,12 @@ class EchoThreads:
         from ECHOV1.commands_center import processesThreads
         processesThreads.Processes.entryExitLogger(None, 'EXIT')
         exit(0)
+
+    def threadShowTerminalInfo(self=None):
+        print('Command passed the test')
+
+    def threadShowAuthorCredits(self=None):
+        print('Command passed the test')
 
 
 class FlightThreads:
@@ -156,3 +147,9 @@ class FlightThreads:
 
     def flightHelp(self=None):
         pass
+
+
+class StrictOperations:
+
+    def allowAdminAccess(self=None):
+        print("Admin console!!")

@@ -9,14 +9,20 @@ from ECHOV1.functionalEngine import threadsEngine
 processes = processesThreads.Processes  # Process threads
 E_threads = threadsEngine.EchoThreads  # Echo threads
 V_threads = threadsEngine.FlightThreads  # Flight threads
+STRICT_ENTRY = threadsEngine.StrictOperations
 
 terminalProcessor = {
     'echo --intro': E_threads.threadEchoIntro,
     'echo --time': E_threads.threadEchoTime,
+    'echo --date': E_threads.threadEchoDate,
     'echo --prepare for launch': E_threads.threadEchoPrepareForLaunch,
     'echo --exit': E_threads.threadEchoExit,
     'echo --get log data': processes.getLogsData,
-    'echo --clear': E_threads.threadClearTerminal
+    'echo --clear': E_threads.threadClearTerminal,
+    'echo --test for launch': E_threads.threadEchoTestForLaunch,
+    'echo --start -terminal': E_threads.threadShowTerminalInfo,
+    'show --author -credits': E_threads.threadShowAuthorCredits,
+
 }
 
 vehicleProcessor = {
@@ -28,4 +34,8 @@ vehicleProcessor = {
     'help': processes.helpEcho
 }
 
-commandsStorage = [terminalProcessor, vehicleProcessor, processes]
+STRICT_ACCESS = {
+    'green operation --open -admin console --root': STRICT_ENTRY.allowAdminAccess
+}
+
+commandsStorage = [terminalProcessor, vehicleProcessor, processes, STRICT_ACCESS]

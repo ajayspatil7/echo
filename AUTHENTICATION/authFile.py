@@ -10,7 +10,7 @@ def credentialsLog(user=None, logData=None, log_type=None):
     TIME = datetime.today().strftime('%I:%M:%S:%p')
     filePath = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/userLogs.txt'
 
-    # To moitor login and logout activities
+    # To monitor login and logout activities
     if user and logData is not None:
         timeStamp = str(datetime.today()).split('.')[0]
         filePath = '/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/userLogs.txt'
@@ -85,7 +85,7 @@ def login():
             #     return False
 
 
-def createAccount() -> str:
+def createAccount() -> bool:
     credentialsLog(logData='<Create Account Started>', log_type="manually")
 
     userID = input("UserID > ")
@@ -105,6 +105,7 @@ def createAccount() -> str:
 
     # To log the time of user account creation stopped.
     credentialsLog(logData='<Create Account Completed!!>', log_type='manually')
+    return True
 
 
 def logout() -> str:
@@ -131,6 +132,7 @@ def startAuthentication():
     while choice != 'exit':
         if choice in authenticationMap.keys():
             authenticationMap[choice]()
+            break
         else:
             cprint("Invalid Choice!!", 'red', attrs=['bold'])
             count += 1
@@ -153,7 +155,11 @@ try:
     startAuthentication()
 except KeyboardInterrupt:
     credentialsLog(logData="<Authentication FORCE stopped>", log_type='manually')
-    print("Exiting...")
+    cprint("Authentication Stopped!", 'red', attrs=['bold'])
+    print("\nExiting...")
     exit()
+
+
+
 
 

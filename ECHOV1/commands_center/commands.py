@@ -16,9 +16,9 @@ class Commands:
     VALID_TERMINAL_OPERATIONS = {
         'start': 'Starts the terminal \n',
         'time': 'Shows the current time of the flight \n',
-        'date': 'Shows the current date of the flight \n',
-        'show terminal info': 'Shows the info about the terminal \n',
-        'show author credits': 'Shows the credits of the author \n',
+        'echo --date': 'Shows the current date of the flight \n',
+        'show --terminal -info': 'Shows the info about the terminal \n',
+        'show --author -credits': 'Shows the credits of the author \n',
     }
 
     VALID_FLIGHT_OPERATIONS = {
@@ -28,6 +28,10 @@ class Commands:
         'status': 'Shows the status of the flight \n',
         'info': 'Shows the info about the flight \n',
         'help': 'Shows the help menu \n',
+    }
+
+    VALID_STRICT_COMMAND = {
+        'green operation --open -admin console --root': 'Open admin console if conditions satisfied',
     }
 
 
