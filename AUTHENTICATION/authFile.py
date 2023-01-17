@@ -38,7 +38,7 @@ def credentialsLog(user=None, logData=None, log_type=None):
         tabulatedLog = tabulate(data, headers=['User', 'Log Data', 'Time Stamp'], tablefmt='fancy_grid')
 
 
-def login():
+def login() -> bool:
     credentialsLog(logData='<Login function started!>', log_type='manually')
     userID = input("U-ID > ")
     passWD = input("Key-CODE > ")
@@ -57,6 +57,7 @@ def login():
                 print(True)
                 credentialsLog(logData='<Login function completed!>', log_type='manually')
                 return True
+
             # login
         else:
             credentialsLog(user=userID, logData='Login Failed')
@@ -160,6 +161,8 @@ except KeyboardInterrupt:
     exit()
 
 
-
+# StartAuthentication
+# > L -> S -> Ex
+# >
 
 

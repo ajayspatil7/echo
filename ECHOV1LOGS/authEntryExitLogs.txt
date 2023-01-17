@@ -214,3 +214,10 @@
 <Login function started!>           @ 10:43:10:AM -> 2022-12-08 
 <Login function completed!>         @ 10:43:18:AM -> 2022-12-08 
 <Authentication stopped>            @ 10:43:18:AM -> 2022-12-08 
+<Authentication Started>            @ 09:45:39:PM -> 2023-01-16 
+<Login function started!>           @ 09:45:44:PM -> 2023-01-16 
+<Login function completed!>         @ 09:45:47:PM -> 2023-01-16 
+<Login function started!>           @ 09:45:47:PM -> 2023-01-16 
+<Authentication FORCE stopped>      @ 09:45:52:PM -> 2023-01-16 
+<Authentication Started>            @ 09:47:21:PM -> 2023-01-16 
+<Authentication FORCE stopped>      @ 09:47:33:PM -> 2023-01-16 
