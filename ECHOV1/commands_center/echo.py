@@ -10,9 +10,8 @@ from ECHOV1.commands_center import processesThreads
 DATE = datetime.today().strftime('%Y-%m-%d')
 TIME = datetime.today().strftime('%I:%M:%S:%p')
 
-termOut.echoLabel()
 
-cprint(f"ECHO V1 started on {DATE} at {TIME} \n", 'green', attrs=['bold'])
+cprint(f"ADMIN  {DATE} at {TIME} \n", 'green', attrs=['bold'])
 processesThreads.Processes().entryExitLogger('ENTRY')
 while True:
     DATE = datetime.today().strftime('%Y-%m-%d')

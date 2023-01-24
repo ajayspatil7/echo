@@ -4,6 +4,11 @@ from termcolor import *
 from datetime import datetime
 from tabulate import tabulate
 
+# This function is used to log the credentials with time and date at specific events.
+# The user parameter is used to log the user who is performing the action.
+# The logData parameter is used to log the data of the action performed by the user. Eg; what command was executed.
+# The log_type parameter is used to log the type of log. Eg; manually or automatically.
+
 
 def credentialsLog(user=None, logData=None, log_type=None):
     DATE = datetime.today().strftime('%Y-%m-%d')
@@ -83,7 +88,7 @@ def login() -> bool:
             #     return True
             # else:
             #     print("Login Failed!")
-            #     return False
+            #     return False\
 
 
 def createAccount() -> bool:
@@ -148,21 +153,16 @@ def startAuthentication():
         authenticationMap[choice]()
 
     credentialsLog(logData="<Authentication stopped>", log_type='manually')
-
-
 # Users in usersData.txt file (Ajay, Praju, Ajju, None)
 
-try:
-    startAuthentication()
-except KeyboardInterrupt:
-    credentialsLog(logData="<Authentication FORCE stopped>", log_type='manually')
-    cprint("Authentication Stopped!", 'red', attrs=['bold'])
-    print("\nExiting...")
-    exit()
 
-
-# StartAuthentication
-# > L -> S -> Ex
-# >
+def initiateAuthentication() -> bool:
+    try:
+        startAuthentication()
+    except KeyboardInterrupt:
+        credentialsLog(logData="<Authentication FORCE stopped>", log_type='manually')
+        cprint("Authentication Stopped!", 'red', attrs=['bold'])
+        print("\nExiting...")
+        exit()
 
 
