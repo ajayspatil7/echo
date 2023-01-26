@@ -35,7 +35,7 @@ class Processes:
             return False
 
     # Function to log the command to a file
-    def log(self, command):
+    def log(self, command, path=None):
         log_DATE = datetime.today().strftime('%Y-%m-%d')
         log_TIME = datetime.today().strftime('%I:%M:%S:%p')
 
@@ -48,6 +48,10 @@ class Processes:
         if self.inspectCommandStage1(command) is False:
             with open('/Users/ajay/PycharmProjects/echo/ECHOV1LOGS/commandsLogsFailed', 'a') as invFile:
                 invFile.write(f"{command}|@ {log_TIME} on {log_DATE} \n")
+
+        if path is not None:
+            with open(path, 'a') as file:
+                file.write(f"{command}      |       @ {log_TIME} on {log_DATE} \n")
 
     # Function to show the terminal info
 
