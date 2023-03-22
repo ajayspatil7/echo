@@ -153,7 +153,6 @@ def startAuthentication():
         authenticationMap[choice]()
 
     credentialsLog(logData="<Authentication stopped>", log_type='manually')
-# Users in usersData.txt file (Ajay, Praju, Ajju, None)
 
 
 def initiateAuthentication() -> bool:

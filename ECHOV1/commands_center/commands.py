@@ -11,6 +11,7 @@ class Commands:
         'echo --get log data': 'P for passed log data and F for failed logs data \n',
         'echo --exit': 'Prepares to exit the flight \n',
         'echo --clear': 'Clears the terminal and previous commands \n',
+        'echo --stop': 'Stop the terminal and end the processes',
     }
 
     VALID_TERMINAL_OPERATIONS = {

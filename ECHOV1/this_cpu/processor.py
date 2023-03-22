@@ -22,6 +22,7 @@ terminalProcessor = {
     'echo --test for launch': E_threads.threadEchoTestForLaunch,
     'echo --start -terminal': E_threads.threadShowTerminalInfo,
     'show --author -credits': E_threads.threadShowAuthorCredits,
+    'echo --stop': E_threads.threadKill,
 
 }
 

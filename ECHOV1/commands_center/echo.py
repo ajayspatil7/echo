@@ -27,7 +27,7 @@ while True:
             processesThreads.Processes().signalEcho(command)
 
         else:
-            cprint("Invalid command.", 'red')
+            cprint(f"({command}) found invalid.", 'red')
 
     except KeyboardInterrupt:
         DATE = datetime.today().strftime('%Y-%m-%d')

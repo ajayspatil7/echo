@@ -70,6 +70,9 @@ class EchoThreads:
     def threadShowAuthorCredits(self=None):
         print('Command passed the test')
 
+    def threadKill(self=None):
+        exit(0)
+
 
 class FlightThreads:
 
@@ -151,5 +154,5 @@ class FlightThreads:
 
 class StrictOperations:
 
-    def allowAdminAccess(self=None):
-        print("Admin console!!")
+    def allowAdminAccess(self):
+        pass

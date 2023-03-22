@@ -65,8 +65,12 @@ class Processes:
         from ECHOV1.this_cpu import processor
         if command in processor.terminalProcessor:
             processor.terminalProcessor[command]()
+            return True
         elif command in processor.vehicleProcessor:
             processor.vehicleProcessor[command]()
+            return True
+        else:
+            return False
 
     # Does nothing as of now
     def getSignal(self, command: str) -> bool:
@@ -138,4 +142,3 @@ class Processes:
         # for x in commandsComms.VALID_ECHO_COMMANDS.keys():
         #     print(f"{x}: {commandsComms.VALID_ECHO_COMMANDS[x]}")
         # Get all the commands usage from
-        pass
