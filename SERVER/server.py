@@ -11,6 +11,7 @@ class RequestHandler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b'Input received')
 
+
     def do_GET(self):
         # handle GET requests
         self.send_response(200)

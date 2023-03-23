@@ -1,6 +1,4 @@
 import http.server
-
-
 class RequestHandler(http.server.BaseHTTPRequestHandler):
     def do_POST(self):
         # read the input value from the POST request
