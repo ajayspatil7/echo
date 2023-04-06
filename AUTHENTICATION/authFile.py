@@ -9,7 +9,7 @@ from tabulate import tabulate
 # The logData parameter is used to log the data of the action performed by the user. Eg; what command was executed.
 # The log_type parameter is used to log the type of log. Eg; manually or automatically.
 
-
+# Logger
 def credentialsLog(user=None, logData=None, log_type=None):
     DATE = datetime.today().strftime('%Y-%m-%d')
     TIME = datetime.today().strftime('%I:%M:%S:%p')
@@ -42,7 +42,7 @@ def credentialsLog(user=None, logData=None, log_type=None):
         data = [i.split('::') for i in data]
         tabulatedLog = tabulate(data, headers=['User', 'Log Data', 'Time Stamp'], tablefmt='fancy_grid')
 
-
+#Login Function
 def login() -> bool:
     credentialsLog(logData='<Login function started!>', log_type='manually')
     userID = input("U-ID > ")
@@ -90,7 +90,7 @@ def login() -> bool:
             #     print("Login Failed!")
             #     return False\
 
-
+# Create account function
 def createAccount() -> bool:
     credentialsLog(logData='<Create Account Started>', log_type="manually")
 
@@ -113,20 +113,20 @@ def createAccount() -> bool:
     credentialsLog(logData='<Create Account Completed!!>', log_type='manually')
     return True
 
-
+# Logout function
 def logout() -> str:
     credentialsLog(logData='<Logout function started!>', log_type='manually')
     os.system('clear')
     credentialsLog(logData='<Logout function completed!>', log_type='manually')
 
-
+# Authentication map
 authenticationMap = {
     'login': login,
     'create': createAccount,
     'logout': logout
 }
 
-
+# Start authentication function
 def startAuthentication():
     credentialsLog(logData="<Authentication Started>", log_type='manually')
     cprint("----ECHO Secure Authentication Systems----\n", 'green', attrs=['bold'])
