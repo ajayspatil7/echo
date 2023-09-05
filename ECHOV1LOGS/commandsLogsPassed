@@ -54,3 +54,42 @@ echo --date|@ 01:42:23:AM on 2023-03-01
 help|@ 08:57:54:PM on 2023-03-20 
 help|@ 08:57:54:PM on 2023-03-20 
 help|@ 08:57:54:PM on 2023-03-20 
+help|@ 11:11:31:PM on 2023-04-21 
+help|@ 11:11:31:PM on 2023-04-21 
+help|@ 11:11:31:PM on 2023-04-21 
+help|@ 11:12:40:PM on 2023-04-21 
+help|@ 11:12:40:PM on 2023-04-21 
+help|@ 11:12:40:PM on 2023-04-21 
+echo --intro|@ 11:12:53:PM on 2023-04-21 
+echo --intro|@ 11:12:53:PM on 2023-04-21 
+echo --intro|@ 11:12:53:PM on 2023-04-21 
+echo --time|@ 11:13:19:PM on 2023-04-21 
+echo --time|@ 11:13:19:PM on 2023-04-21 
+echo --time|@ 11:13:19:PM on 2023-04-21 
+echo --date|@ 11:13:23:PM on 2023-04-21 
+echo --date|@ 11:13:23:PM on 2023-04-21 
+echo --date|@ 11:13:23:PM on 2023-04-21 
+help|@ 11:15:19:PM on 2023-04-21 
+help|@ 11:15:19:PM on 2023-04-21 
+help|@ 11:15:19:PM on 2023-04-21 
+help|@ 09:31:03:AM on 2023-09-05 
+help|@ 09:31:03:AM on 2023-09-05 
+help|@ 09:31:03:AM on 2023-09-05 
+show --author -credits|@ 09:32:24:AM on 2023-09-05 
+show --author -credits|@ 09:32:24:AM on 2023-09-05 
+show --author -credits|@ 09:32:24:AM on 2023-09-05 
+show --author -credits|@ 09:33:25:AM on 2023-09-05 
+show --author -credits|@ 09:33:25:AM on 2023-09-05 
+show --author -credits|@ 09:33:25:AM on 2023-09-05 
+show --author -credits|@ 09:34:58:AM on 2023-09-05 
+show --author -credits|@ 09:34:58:AM on 2023-09-05 
+show --author -credits|@ 09:34:58:AM on 2023-09-05 
+echo --date|@ 09:35:34:AM on 2023-09-05 
+echo --date|@ 09:35:34:AM on 2023-09-05 
+echo --date|@ 09:35:34:AM on 2023-09-05 
+echo --time|@ 09:35:37:AM on 2023-09-05 
+echo --time|@ 09:35:37:AM on 2023-09-05 
+echo --time|@ 09:35:37:AM on 2023-09-05 
+show --author -credits|@ 09:36:06:AM on 2023-09-05 
+show --author -credits|@ 09:36:06:AM on 2023-09-05 
+show --author -credits|@ 09:36:06:AM on 2023-09-05 

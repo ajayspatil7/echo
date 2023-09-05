@@ -9,3 +9,17 @@ hello -world|@ 01:40:06:AM on 2023-03-01
 "hello, world"|@ 01:40:18:AM on 2023-03-01 
 clear|@ 01:40:30:AM on 2023-03-01 
 echo --info|@ 01:42:29:AM on 2023-03-01 
+echo --start|@ 11:12:00:PM on 2023-04-21 
+None|@ 11:12:57:PM on 2023-04-21 
+sangamesh|@ 11:16:04:PM on 2023-04-21 
+credits|@ 09:31:07:AM on 2023-09-05 
+clear|@ 09:31:23:AM on 2023-09-05 
+cls|@ 09:31:29:AM on 2023-09-05 
+green operation --open -admin console --root|@ 09:32:08:AM on 2023-09-05 
+green operation --open -admin console --root|@ 09:32:10:AM on 2023-09-05 
+clear|@ 09:32:27:AM on 2023-09-05 
+date|@ 09:35:25:AM on 2023-09-05 
+Date|@ 09:35:29:AM on 2023-09-05 
+exit|@ 09:36:12:AM on 2023-09-05 
+quit|@ 09:36:14:AM on 2023-09-05 
+kill|@ 09:36:17:AM on 2023-09-05 

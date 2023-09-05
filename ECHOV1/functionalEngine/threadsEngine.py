@@ -68,7 +68,10 @@ class EchoThreads:
         print('Command passed the test')
 
     def threadShowAuthorCredits(self=None):
-        print('Command passed the test')
+        cprint("Author : AJAY S PATIL", 'green', attrs=['bold'])
+        cprint("Project name : ECHO", 'green', attrs=['bold'])
+        cprint("Version : 1.0", 'green', attrs=['bold'])
+        cprint("Date : Oct 2022", 'green', attrs=['bold'])
 
     def threadKill(self=None):
         exit(0)

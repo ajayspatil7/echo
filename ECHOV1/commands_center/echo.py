@@ -11,7 +11,7 @@ DATE = datetime.today().strftime('%Y-%m-%d')
 TIME = datetime.today().strftime('%I:%M:%S:%p')
 
 
-cprint(f"ADMIN  {DATE} at {TIME} \n", 'green', attrs=['bold'])
+cprint(f"ADMIN  {DATE} @ {TIME} \n", 'green', attrs=['bold'])
 processesThreads.Processes().entryExitLogger('ENTRY')
 while True:
     DATE = datetime.today().strftime('%Y-%m-%d')
